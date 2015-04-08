@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="English" data-ng-app="tableApp" data-ng-strict-di>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Table App</title>
+		<link href="css/style.css" rel="stylesheet">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			
+			<div class="row">
+				<div class="col-md-12" data-ng-controller="Table as table">
+					<h3 class="ta-title">Table made with Bootsrap and AngularJS</h3>
+				    
+				    <table st-table="table.displayedCollection" st-safe-src="table.rowCollection" class="table ta-table">
+					    <thead>
+					      	<tr>
+						      <th st-sort="Name">Name</th>
+						      <th st-sort="Age">Age</th>
+				      		</tr>
+				      		<tr>
+								<th colspan="5"	><input st-search="" class="form-control" placeholder="global search ..." type="text"/></th>
+							</tr>
+				    	</thead>
+				    	<tbody>
+				      	<tr ng-repeat="row in table.displayedCollection">
+				      		<td class="col-md-6">
+				      			<span class="ta-tableText">{{row.Name}}</span>
+				      		</td>
+				        	<td class="col-md-6">
+				        		<span class="ta-tableText ta-25">{{row.Age}}</span> 
+				        		<button data-ng-click="table.addAge($index)" type="button" class="btn btn-xs btn-default ta-btn ta-25">Add</button>
+				        		<button data-ng-click="table.substractAge($index)" type="button" class="btn btn-xs btn-default ta-btn ta-25">Substract</button>
+				        		<button data-ng-click="table.removeItem(row)" type="button" class="btn btn-xs btn-default ta-btn ta-25">Remove</button>
+				        	</td>
+				       	</tr>
+					    </tbody>
+				    </table>
+				    <button data-ng-click="table.addRandomItem()" type="button" class="btn btn-default ta-btn ta-blockCenter">Add Random Person</button>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12" data-ng-controller="Table as table">
+					<h3 class="ta-title">Table made with just CSS and jQuery</h3>
+					<table class="ta-table ta-customTable">
+						<tr>
+							<th>Name</th>
+						    <th>Age</th>
+						</tr>
+						<tr>
+						    <td>Bill Gates</td>
+						    <td>
+						    	<span class="ta-customTableAge" data-ta-age="1">70</span>
+						    	<button data-ta-add="1">Add</button>
+						    	<button data-ta-sub="1">Substract</button>
+						    </td>
+						</tr>
+						<tr>
+						    <td>Mark Zukerberg</td>
+						    <td>
+						    	<span class="ta-customTableAge" data-ta-age="2">30</span>
+						    	<button data-ta-add="2">Add</button>
+						    	<button data-ta-sub="2">Substract</button>
+						    </td>
+						</tr>
+						<tr>
+						    <td>Elon Musk</td>
+						    <td>
+						    	<span class="ta-customTableAge" data-ta-age="3">50</span>
+						    	<button data-ta-add="3">Add</button>
+						    	<button data-ta-sub="3">Substract</button>
+						    </td>
+						</tr>
+						<tr>
+						    <td>Richard Branson</td>
+						    <td>
+						    	<span class="ta-customTableAge" data-ta-age="4">60</span>
+						    	<button data-ta-add="4">Add</button>
+						    	<button data-ta-sub="4">Substract</button>
+						    </td>
+						</tr>
+					</table>
+					<button class="ta-customTableAgeAddAll">Add Age for All</button>
+					<button class="ta-customTableAgeSubAll">Substruct Age for All</button>
+				</div>
+			</div>		
+
+		</div>	
+		<!-- Javascript files -->
+		<script src="scripts/jquery.min.js"></script>
+		<script src="scripts/angular.js"></script>
+		<script src="scripts/smart-table.min.js"></script>
+		<script src="scripts/interviewProject.min.js"></script>
+	</body>
+</html>

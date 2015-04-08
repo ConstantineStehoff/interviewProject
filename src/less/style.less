@@ -1,0 +1,72 @@
+@import "../../../bower_components/bootstrap-less/less/bootstrap.less";
+
+body {
+	background-color: #bdc3c7;
+}
+.ta-table {
+	border: 1px solid #dddddd;
+}
+
+.ta-customTable {
+	width: 100%;
+	td {
+		width: 50%;
+	}
+	tr:first-child{
+		background-color: #ecf0f1;
+	}
+}
+
+.ta-25{
+	width: 25%;
+}
+
+.ta-table thead{
+	background-color: #ecf0f1;
+}
+
+.table > thead > tr > th {
+	border-bottom: 1px solid #dddddd;
+}
+
+.ta-table > tbody > tr > td{
+	background-color: white;
+}
+
+.ta-table > tbody > tr > td:hover, .ta-table > tbody > tr > td:active{
+	background-color: #ecf0f1;
+}
+
+.ta-title{
+	text-align: center;
+}
+
+.ta-btn, .ta-btn:focus{
+	background-color: #95a5a6; 
+	color: white;
+	-webkit-border-radius: 0; 
+	-moz-border-radius: 0; 
+  	border-radius: 0; 
+  	border: 1px solid #95a5a6;
+}
+
+.ta-btn:hover, .ta-btn:active{
+	background-color: #7f8c8d;
+	border: 1px solid #7f8c8d;
+	color: white;
+}
+
+.ta-blockCenter{
+	display: block;
+	margin: auto;
+}
+
+@media (max-width: 450px){
+	.ta-25{
+		width: 100%;
+	}
+	.ta-tableText{
+		display: block;
+		text-align: center;
+	}
+}
