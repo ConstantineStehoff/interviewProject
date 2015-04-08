@@ -7,5 +7,11 @@ and src folder in dist is a copy of it but it gets compiled into the release fol
 
 I used grunt, bower, npm, angularjs, jquery, and less for this project.
 
+So, if you want to run the local server or compile the project you have to install node and grunt. The project
+contains the package.json and bower.json files so you just need to run 'npm install' and 'bower install' to install
+all of the packages.
+
 You can use a command 'grunt server' to run the project locally. Also, in order to compile the project simply
 run 'grunt' or 'grunt default'.
+
+Thank you
