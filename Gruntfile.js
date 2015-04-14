@@ -2,7 +2,6 @@ module.exports = function (grunt) {
  
     // Load grunt tasks automatically
     require('load-grunt-tasks')(grunt);
-    require('connect-livereload')();
  
     // init required configurations for each task.
     grunt.initConfig({
